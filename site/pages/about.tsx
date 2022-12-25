@@ -1,3 +1,4 @@
+import { Layout } from '@components/common'
 import { useRef, useEffect } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -5,467 +6,467 @@ import { Container, Row, Col } from 'react-bootstrap'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 
-export default function Home() {
-    const video1 = useRef<HTMLInputElement>(null);
-    const video2 = useRef<HTMLInputElement>(null);
-    const video3 = useRef<HTMLInputElement>(null);
-    const video4 = useRef<HTMLInputElement>(null);
+export default function About() {
+  const video1 = useRef<HTMLVideoElement>(null);
+  const video2 = useRef<HTMLVideoElement>(null);
+  const video3 = useRef<HTMLVideoElement>(null);
+  const video4 = useRef<HTMLVideoElement>(null);
 
-    useEffect(() => {
-        const attemptPlay = () => {
-            video1 &&
-                video1.current &&
-                video1.current.play().catch(error => {
-                    console.error("Error attempting to play", error);
-                });
-            video2 &&
-                video2.current &&
-                video2.current.play().catch(error => {
-                    console.error("Error attempting to play", error);
-                });
-            video3 &&
-                video3.current &&
-                video3.current.play().catch(error => {
-                    console.error("Error attempting to play", error);
-                });
-            video4 &&
-                video4.current &&
-                video4.current.play().catch(error => {
-                    console.error("Error attempting to play", error);
-                });
+  useEffect(() => {
+    const attemptPlay = () => {
+      video1 &&
+        video1.current &&
+        video1.current.play().catch(error => {
+          console.error("Error attempting to play", error);
+        });
+      video2 &&
+        video2.current &&
+        video2.current.play().catch(error => {
+          console.error("Error attempting to play", error);
+        });
+      video3 &&
+        video3.current &&
+        video3.current.play().catch(error => {
+          console.error("Error attempting to play", error);
+        });
+      video4 &&
+        video4.current &&
+        video4.current.play().catch(error => {
+          console.error("Error attempting to play", error);
+        });
 
-            // elementsRef.current.map(el => {
-            //     el &&
-            //         el.current &&
-            //         el.current.play().catch(error => {
-            //             console.error("Error attempting to play", error);
-            //         });
+      // elementsRef.current.map(el => {
+      //     el &&
+      //         el.current &&
+      //         el.current.play().catch(error => {
+      //             console.error("Error attempting to play", error);
+      //         });
 
-            // }) 
+      // }) 
 
-        };
-        attemptPlay();
-    }, []);
+    };
+    attemptPlay();
+  }, []);
 
-    return (
-        <div className={styles.container}>
-            <Head>
-                <title>Mike Wilen | Real State</title>
-                <meta name="description" content="Mike Wilen Real State" />
-                <link rel="icon" href="/favicon.png" />
-            </Head>
+  return (
+    <div className={styles.container}>
+      <Head>
+        <title>Mike Wilen | Real State</title>
+        <meta name="description" content="Mike Wilen Real State" />
+        <link rel="icon" href="/favicon.png" />
+      </Head>
 
-            <main>
-                <section className='about-header mb-5'>
-                    <Container>
-                        <Row>
-                            <Col md={6} className="p-0">
-                                <div className='video-container'>
-                                    <video
-                                        style={{ maxWidth: "100%", width: "100%", margin: "0 auto" }}
-                                        playsInline
-                                        loop
-                                        muted
-                                        // alt="All the devices"
-                                        src={'/1-Mike-Wilen-Final-Black-and-White.mp4'}
-                                        ref={video1}
-                                    />
-                                    {/* <img src='/leadership1.jpeg' className='w-100 h-100' /> */}
-                                </div>
-                            </Col>
-                            <Col md={6} className="p-0">
-                                <div className='video-container'>
-                                    <video
-                                        style={{ maxWidth: "100%", width: "100%", margin: "0 auto" }}
-                                        playsInline
-                                        loop
-                                        muted
-                                        // alt="All the devices"
-                                        src={'/1-Top-1MW-3.mp4'}
-                                        ref={video2}
-                                    />
-                                    {/* <img src='/leadership2.jpeg' className='w-100 h-100' /> */}
-                                </div>
-                            </Col>
-                            <Col md={6} className="p-0">
-                                <div className='video-container'>
-                                    <video
-                                        style={{ maxWidth: "100%", width: "100%", margin: "0 auto" }}
-                                        playsInline
-                                        loop
-                                        muted
-                                        // alt="All the devices"
-                                        src={'/1-Downtown-Minneapolis.mp4'}
-                                        ref={video3}
-                                    />
-                                    {/* <img src='/remote38.jpeg' className='w-100 h-100' /> */}
-                                </div>
-                            </Col>
-                            <Col md={6} className="p-0">
-                                <div className='video-container'>
-                                    <video
-                                        style={{ maxWidth: "100%", width: "100%", margin: "0 auto" }}
-                                        playsInline
-                                        loop
-                                        muted
-                                        // alt="All the devices"
-                                        src={'/1-Minnesota-Video.mp4'}
-                                        ref={video4}
-                                    />
-                                    {/* <img src='/remote40.jpeg' className='w-100 h-100' /> */}
-                                </div>
-                            </Col>
-                        </Row>
+      <main>
+        <section className='about-header mb-5'>
+          <Container>
+            <Row>
+              <Col md={6} className="p-0">
+                <div className='video-container'>
+                  <video
+                    style={{ maxWidth: "100%", width: "100%", margin: "0 auto" }}
+                    playsInline
+                    loop
+                    muted
+                    // alt="All the devices"
+                    src={'/1-Mike-Wilen-Final-Black-and-White.mp4'}
+                    ref={video1}
+                  />
+                  {/* <img src='/leadership1.jpeg' className='w-100 h-100' /> */}
+                </div>
+              </Col>
+              <Col md={6} className="p-0">
+                <div className='video-container'>
+                  <video
+                    style={{ maxWidth: "100%", width: "100%", margin: "0 auto" }}
+                    playsInline
+                    loop
+                    muted
+                    // alt="All the devices"
+                    src={'/1-Top-1MW-3.mp4'}
+                    ref={video2}
+                  />
+                  {/* <img src='/leadership2.jpeg' className='w-100 h-100' /> */}
+                </div>
+              </Col>
+              <Col md={6} className="p-0">
+                <div className='video-container'>
+                  <video
+                    style={{ maxWidth: "100%", width: "100%", margin: "0 auto" }}
+                    playsInline
+                    loop
+                    muted
+                    // alt="All the devices"
+                    src={'/1-Downtown-Minneapolis.mp4'}
+                    ref={video3}
+                  />
+                  {/* <img src='/remote38.jpeg' className='w-100 h-100' /> */}
+                </div>
+              </Col>
+              <Col md={6} className="p-0">
+                <div className='video-container'>
+                  <video
+                    style={{ maxWidth: "100%", width: "100%", margin: "0 auto" }}
+                    playsInline
+                    loop
+                    muted
+                    // alt="All the devices"
+                    src={'/1-Minnesota-Video.mp4'}
+                    ref={video4}
+                  />
+                  {/* <img src='/remote40.jpeg' className='w-100 h-100' /> */}
+                </div>
+              </Col>
+            </Row>
 
-                    </Container>
-                </section>
+          </Container>
+        </section>
 
-                <section className='experiences'>
-                    <Container>
-                        <div>
-                            <h1 className='main-heading'>
-                                A leader in the marketing and sale of real estate.
-                                {/* We build <br />stunning online <br />experiences */}
-                            </h1>
-                            <p className='main-description'>
-                                1MW is made up of highly skilled individual whose highest priority is
-                                serving you. Say goodbye to the days when a real estate transaction was
-                                time-consuming and exhausting! Instead, experience the 1MW difference.
-                            </p>
-                        </div>
+        <section className='experiences'>
+          <Container>
+            <div>
+              <h1 className='!text-primary main-heading'>
+                A leader in the marketing and sale of real estate.
+                {/* We build <br />stunning online <br />experiences */}
+              </h1>
+              <p className='!text-primary main-description'>
+                1MW is made up of highly skilled individual whose highest priority is
+                serving you. Say goodbye to the days when a real estate transaction was
+                time-consuming and exhausting! Instead, experience the 1MW difference.
+              </p>
+            </div>
 
-                        <div className='services-section'>
-                            <div className='service-section mt-5'>
-                                <div className='d-flex justify-content-between align-items-baseline mb-4'>
-                                    <h2 className='service-heading border-bottom w-100'>
-                                        What We Do
-                                    </h2>
-                                    {/* <Link href="/" className='viewall-link'>
-                      View all
-                  </Link> */}
-                                </div>
-                                <Row>
-                                    <Col md={10} lg={8} sm={12}>
-                                        {/* <div className='service-outer'> */}
-                                        {/* <h4 className='service-title'>
-                        Marketing Website
-                      </h4> */}
-                                        <p className='service-description'>
-                                            Setting the bar for the highest standard of comprehensive, white-glove
-                                            real estate service in the industry, 1MW, led by real estate expert
-                                            Mike Wilen, boasts expertise combined with an unparalleled global
-                                            network across residential and commercial markets.
-                                        </p>
-                                        {/* </div> */}
-                                    </Col>
-                                    {/* <Col md={4} lg={4} sm={6}>
-                    <div className='service-outer'>
-                      <h4 className='service-title'>
-                        Marketing Website
-                      </h4>
-                      <p className='service-description'>
-                        We design and build fast marketing websites tailored to your brand
-                      </p>
-                    </div>
-                  </Col>
-                  <Col md={4} lg={4} sm={6}>
-                    <div className='service-outer'>
-                      <h4 className='service-title'>
-                        Marketing Website
-                      </h4>
-                      <p className='service-description'>
-                        We design and build fast marketing websites tailored to your brand
-                      </p>
-                    </div>
-                  </Col>
-                  <Col md={4} lg={4} sm={6}>
-                    <div className='service-outer'>
-                      <h4 className='service-title'>
-                        Marketing Website
-                      </h4>
-                      <p className='service-description'>
-                        We design and build fast marketing websites tailored to your brand
-                      </p>
-                    </div>
-                  </Col> */}
-                                </Row>
-
-                            </div>
-                            <div className='service-section mt-5'>
-                                <div className='d-flex justify-content-between align-items-baseline mb-4'>
-                                    <h2 className='service-heading border-bottom w-100'>
-                                        Marketing
-                                    </h2>
-                                    {/* <Link href="/" className='viewall-link'>
-                      View all
-                  </Link> */}
-                                </div>
-                                <Row>
-                                    <Col md={10} lg={8} sm={12}>
-                                        {/* <div className='service-outer'> */}
-                                        {/* <h4 className='service-title'>
-                        Marketing Website
-                      </h4> */}
-                                        <p className='service-description'>
-                                            With over a decade of experience, 1MW has become a leader in the marketing and sale of real estate. That’s not a brag, it’s a promise: to deliver tomorrow’s creative solutions — today.<br /><br />
-                                            NONMLS.com is a single entry no-code content hub to deliver, personalize and recommend real estate to consumers – across multiple channels. It's a platform that combines predictive analytics, reporting, data analytics, and data integration capabilities.
-                                        </p>
-                                        {/* </div> */}
-                                    </Col>
-                                    {/* <Col md={4} lg={4} sm={6}>
-                    <div className='service-outer'>
-                      <h4 className='service-title'>
-                        Marketing Website
-                      </h4>
-                      <p className='service-description'>
-                        We design and build fast marketing websites tailored to your brand
-                      </p>
-                    </div>
-                  </Col>
-                  <Col md={4} lg={4} sm={6}>
-                    <div className='service-outer'>
-                      <h4 className='service-title'>
-                        Marketing Website
-                      </h4>
-                      <p className='service-description'>
-                        We design and build fast marketing websites tailored to your brand
-                      </p>
-                    </div>
-                  </Col>
-                  <Col md={4} lg={4} sm={6}>
-                    <div className='service-outer'>
-                      <h4 className='service-title'>
-                        Marketing Website
-                      </h4>
-                      <p className='service-description'>
-                        We design and build fast marketing websites tailored to your brand
-                      </p>
-                    </div>
-                  </Col> */}
-                                </Row>
-
-                            </div>
-                            <div className='service-section mt-5'>
-                                <div className='d-flex justify-content-between align-items-baseline mb-4'>
-                                    <h2 className='service-heading border-bottom w-100'>
-                                        Visionary Experts
-                                    </h2>
-                                    {/* <Link href="/" className='viewall-link'>
-                      View all
-                  </Link> */}
-                                </div>
-                                <Row>
-                                    <Col md={10} lg={8} sm={12}>
-                                        {/* <div className='service-outer'> */}
-                                        {/* <h4 className='service-title'>
-                        Marketing Website
-                      </h4> */}
-                                        <p className='service-description'>
-                                            Your property lives through every touchpoint. Working collaboratively, we uncover and amplify your property’s unique value, while modifying misconceptions along the way.
-                                        </p>
-                                        {/* </div> */}
-                                    </Col>
-                                    {/* <Col md={4} lg={4} sm={6}>
-                    <div className='service-outer'>
-                      <h4 className='service-title'>
-                        Marketing Website
-                      </h4>
-                      <p className='service-description'>
-                        We design and build fast marketing websites tailored to your brand
-                      </p>
-                    </div>
-                  </Col>
-                  <Col md={4} lg={4} sm={6}>
-                    <div className='service-outer'>
-                      <h4 className='service-title'>
-                        Marketing Website
-                      </h4>
-                      <p className='service-description'>
-                        We design and build fast marketing websites tailored to your brand
-                      </p>
-                    </div>
-                  </Col>
-                  <Col md={4} lg={4} sm={6}>
-                    <div className='service-outer'>
-                      <h4 className='service-title'>
-                        Marketing Website
-                      </h4>
-                      <p className='service-description'>
-                        We design and build fast marketing websites tailored to your brand
-                      </p>
-                    </div>
-                  </Col> */}
-                                </Row>
-
-                            </div>
-                            <div className='service-section mt-5'>
-                                <div className='d-flex justify-content-between align-items-baseline mb-4'>
-                                    <h2 className='service-heading border-bottom w-100'>
-                                        Offering Opportunity and Value in All Market Conditions
-                                    </h2>
-                                    {/* <Link href="/" className='viewall-link'>
-                      View all
-                  </Link> */}
-                                </div>
-                                <Row>
-                                    <Col md={10} lg={8} sm={12}>
-                                        {/* <div className='service-outer'> */}
-                                        {/* <h4 className='service-title'>
-                        Marketing Website
-                      </h4> */}
-                                        <p className='service-description'>
-                                            Today, 1MW has assisted 35+ of the largest and most sophisticated local, global, public and private lenders in the sale and valuation of real estate, with over 40,000 portfolio valuations and 200+ sales. Past and present clients include: Nationstar, Huntington, Bank of America, Goldman Sachs, Minnesota Housing, Citi, Beal Bank, US Bank, HUD, Carrington, J.P. Morgan Chase, M&T Bank, Compeer, USDA, PennyMac, Freddie Mac, CLMG, City National, Altisource and Thrivent Financial.
-                                        </p>
-                                        {/* </div> */}
-                                    </Col>
-                                    {/* <Col md={4} lg={4} sm={6}>
-                    <div className='service-outer'>
-                      <h4 className='service-title'>
-                        Marketing Website
-                      </h4>
-                      <p className='service-description'>
-                        We design and build fast marketing websites tailored to your brand
-                      </p>
-                    </div>
-                  </Col>
-                  <Col md={4} lg={4} sm={6}>
-                    <div className='service-outer'>
-                      <h4 className='service-title'>
-                        Marketing Website
-                      </h4>
-                      <p className='service-description'>
-                        We design and build fast marketing websites tailored to your brand
-                      </p>
-                    </div>
-                  </Col>
-                  <Col md={4} lg={4} sm={6}>
-                    <div className='service-outer'>
-                      <h4 className='service-title'>
-                        Marketing Website
-                      </h4>
-                      <p className='service-description'>
-                        We design and build fast marketing websites tailored to your brand
-                      </p>
-                    </div>
-                  </Col> */}
-                                </Row>
-
-                            </div>
-                            <div className='service-section mt-5'>
-                                <div className='d-flex justify-content-between align-items-baseline mb-4'>
-                                    <h2 className='service-heading border-bottom w-100'>
-                                        Mike Wilen
-                                    </h2>
-                                    {/* <Link href="/" className='viewall-link'>
-                      View all
-                  </Link> */}
-                                </div>
-                                <Row>
-                                    <Col md={10} lg={8} sm={12}>
-                                        {/* <div className='service-outer'> */}
-                                        {/* <h4 className='service-title'>
-                        Marketing Website
-                      </h4> */}
-                                        <p className='service-description'>
-                                            600+ Properties Sold Representing Seller<br />
-                                            14+ Awards<br />
-                                            Coldwell Banker Global Luxury
-                                        </p>
-                                        {/* </div> */}
-                                    </Col>
-                                    {/* <Col md={4} lg={4} sm={6}>
-                    <div className='service-outer'>
-                      <h4 className='service-title'>
-                        Marketing Website
-                      </h4>
-                      <p className='service-description'>
-                        We design and build fast marketing websites tailored to your brand
-                      </p>
-                    </div>
-                  </Col>
-                  <Col md={4} lg={4} sm={6}>
-                    <div className='service-outer'>
-                      <h4 className='service-title'>
-                        Marketing Website
-                      </h4>
-                      <p className='service-description'>
-                        We design and build fast marketing websites tailored to your brand
-                      </p>
-                    </div>
-                  </Col>
-                  <Col md={4} lg={4} sm={6}>
-                    <div className='service-outer'>
-                      <h4 className='service-title'>
-                        Marketing Website
-                      </h4>
-                      <p className='service-description'>
-                        We design and build fast marketing websites tailored to your brand
-                      </p>
-                    </div>
-                  </Col> */}
-                                </Row>
-
-                            </div>
-                            <div className='service-section mt-5'>
-                                <div className='d-flex justify-content-between align-items-baseline mb-4'>
-                                    <h2 className='service-heading border-bottom w-100'>
-                                        Mentions
-                                    </h2>
-                                    {/* <Link href="/" className='viewall-link'>
-                      View all
-                  </Link> */}
-                                </div>
-                                <Row>
-                                    <Col md={10} lg={8} sm={12}>
-                                        {/* <div className='service-outer'> */}
-                                        {/* <h4 className='service-title'>
-                        Marketing Website
-                      </h4> */}
-                                        <p className='service-description'>
-                                            <a href="https://www.fox9.com/news/look-inside-luxurious-rental-homes-for-the-super-bowl?">Fox News – Super Bowl Rental</a><br />
-                                            <a href="https://www.bizjournals.com/twincities/news/2021/11/02/orono-wedding-chapel-on-sale-for-2-6-million.html">Minneapolis St. Paul Business Journal – Orono Listed at $2.6M</a><br />
-                                            <a href="http://startribune.com/twin-cities-home-sales-continue-to-inch-lower-even-as-rates-fall/282507321/">Star Tribune – Minnesota Home Sales</a><br />
-                                            <a href="http://sctimes.com/story/life/2021/08/14/big-lake-minnesota-real-estate-housing-mississippi-river-mansion-coldwell-banker-realty/5454075001/">USA Today – St. Cloud Times – Historic Victorian</a><br />
-                                            <a href="https://www.startribune.com/historic-victorian-mansion-in-st-cloud-goes-on-market/600080718/#1">Star Tribune – Queen Anne Mansion</a><br />
-                                        </p>
-                                        {/* </div> */}
-                                    </Col>
-                                    {/* <Col md={4} lg={4} sm={6}>
-                    <div className='service-outer'>
-                      <h4 className='service-title'>
-                        Marketing Website
-                      </h4>
-                      <p className='service-description'>
-                        We design and build fast marketing websites tailored to your brand
-                      </p>
-                    </div>
-                  </Col>
-                  <Col md={4} lg={4} sm={6}>
-                    <div className='service-outer'>
-                      <h4 className='service-title'>
-                        Marketing Website
-                      </h4>
-                      <p className='service-description'>
-                        We design and build fast marketing websites tailored to your brand
-                      </p>
-                    </div>
-                  </Col>
-                  <Col md={4} lg={4} sm={6}>
-                    <div className='service-outer'>
-                      <h4 className='service-title'>
-                        Marketing Website
-                      </h4>
-                      <p className='service-description'>
-                        We design and build fast marketing websites tailored to your brand
-                      </p>
-                    </div>
-                  </Col> */}
-                                </Row>
-
-                            </div>
-                            {/* <div className='service-section mt-5'>
+            <div className='services-section'>
+              <div className='service-section mt-5'>
                 <div className='d-flex justify-content-between align-items-baseline mb-4'>
-                  <h2 className='service-heading'>
+                  <h2 className='!text-primary service-heading border-bottom w-100'>
+                    What We Do
+                  </h2>
+                  {/* <Link href="/" className='viewall-link'>
+                      View all
+                  </Link> */}
+                </div>
+                <Row>
+                  <Col md={10} lg={8} sm={12}>
+                    {/* <div className='service-outer'> */}
+                    {/* <h4 className='service-title'>
+                        Marketing Website
+                      </h4> */}
+                    <p className='!text-primary service-description'>
+                      Setting the bar for the highest standard of comprehensive, white-glove
+                      real estate service in the industry, 1MW, led by real estate expert
+                      Mike Wilen, boasts expertise combined with an unparalleled global
+                      network across residential and commercial markets.
+                    </p>
+                    {/* </div> */}
+                  </Col>
+                  {/* <Col md={4} lg={4} sm={6}>
+                    <div className='service-outer'>
+                      <h4 className='service-title'>
+                        Marketing Website
+                      </h4>
+                      <p className='!text-primary service-description'>
+                        We design and build fast marketing websites tailored to your brand
+                      </p>
+                    </div>
+                  </Col>
+                  <Col md={4} lg={4} sm={6}>
+                    <div className='service-outer'>
+                      <h4 className='service-title'>
+                        Marketing Website
+                      </h4>
+                      <p className='!text-primary service-description'>
+                        We design and build fast marketing websites tailored to your brand
+                      </p>
+                    </div>
+                  </Col>
+                  <Col md={4} lg={4} sm={6}>
+                    <div className='service-outer'>
+                      <h4 className='service-title'>
+                        Marketing Website
+                      </h4>
+                      <p className='!text-primary service-description'>
+                        We design and build fast marketing websites tailored to your brand
+                      </p>
+                    </div>
+                  </Col> */}
+                </Row>
+
+              </div>
+              <div className='service-section mt-5'>
+                <div className='d-flex justify-content-between align-items-baseline mb-4'>
+                  <h2 className='!text-primary service-heading border-bottom w-100'>
+                    Marketing
+                  </h2>
+                  {/* <Link href="/" className='viewall-link'>
+                      View all
+                  </Link> */}
+                </div>
+                <Row>
+                  <Col md={10} lg={8} sm={12}>
+                    {/* <div className='service-outer'> */}
+                    {/* <h4 className='service-title'>
+                        Marketing Website
+                      </h4> */}
+                    <p className='!text-primary service-description'>
+                      With over a decade of experience, 1MW has become a leader in the marketing and sale of real estate. That’s not a brag, it’s a promise: to deliver tomorrow’s creative solutions — today.<br /><br />
+                      NONMLS.com is a single entry no-code content hub to deliver, personalize and recommend real estate to consumers – across multiple channels. It's a platform that combines predictive analytics, reporting, data analytics, and data integration capabilities.
+                    </p>
+                    {/* </div> */}
+                  </Col>
+                  {/* <Col md={4} lg={4} sm={6}>
+                    <div className='service-outer'>
+                      <h4 className='service-title'>
+                        Marketing Website
+                      </h4>
+                      <p className='!text-primary service-description'>
+                        We design and build fast marketing websites tailored to your brand
+                      </p>
+                    </div>
+                  </Col>
+                  <Col md={4} lg={4} sm={6}>
+                    <div className='service-outer'>
+                      <h4 className='service-title'>
+                        Marketing Website
+                      </h4>
+                      <p className='!text-primary service-description'>
+                        We design and build fast marketing websites tailored to your brand
+                      </p>
+                    </div>
+                  </Col>
+                  <Col md={4} lg={4} sm={6}>
+                    <div className='service-outer'>
+                      <h4 className='service-title'>
+                        Marketing Website
+                      </h4>
+                      <p className='!text-primary service-description'>
+                        We design and build fast marketing websites tailored to your brand
+                      </p>
+                    </div>
+                  </Col> */}
+                </Row>
+
+              </div>
+              <div className='service-section mt-5'>
+                <div className='d-flex justify-content-between align-items-baseline mb-4'>
+                  <h2 className='!text-primary service-heading border-bottom w-100'>
+                    Visionary Experts
+                  </h2>
+                  {/* <Link href="/" className='viewall-link'>
+                      View all
+                  </Link> */}
+                </div>
+                <Row>
+                  <Col md={10} lg={8} sm={12}>
+                    {/* <div className='service-outer'> */}
+                    {/* <h4 className='service-title'>
+                        Marketing Website
+                      </h4> */}
+                    <p className='!text-primary service-description'>
+                      Your property lives through every touchpoint. Working collaboratively, we uncover and amplify your property’s unique value, while modifying misconceptions along the way.
+                    </p>
+                    {/* </div> */}
+                  </Col>
+                  {/* <Col md={4} lg={4} sm={6}>
+                    <div className='service-outer'>
+                      <h4 className='service-title'>
+                        Marketing Website
+                      </h4>
+                      <p className='!text-primary service-description'>
+                        We design and build fast marketing websites tailored to your brand
+                      </p>
+                    </div>
+                  </Col>
+                  <Col md={4} lg={4} sm={6}>
+                    <div className='service-outer'>
+                      <h4 className='service-title'>
+                        Marketing Website
+                      </h4>
+                      <p className='!text-primary service-description'>
+                        We design and build fast marketing websites tailored to your brand
+                      </p>
+                    </div>
+                  </Col>
+                  <Col md={4} lg={4} sm={6}>
+                    <div className='service-outer'>
+                      <h4 className='service-title'>
+                        Marketing Website
+                      </h4>
+                      <p className='!text-primary service-description'>
+                        We design and build fast marketing websites tailored to your brand
+                      </p>
+                    </div>
+                  </Col> */}
+                </Row>
+
+              </div>
+              <div className='service-section mt-5'>
+                <div className='d-flex justify-content-between align-items-baseline mb-4'>
+                  <h2 className='!text-primary service-heading border-bottom w-100'>
+                    Offering Opportunity and Value in All Market Conditions
+                  </h2>
+                  {/* <Link href="/" className='viewall-link'>
+                      View all
+                  </Link> */}
+                </div>
+                <Row>
+                  <Col md={10} lg={8} sm={12}>
+                    {/* <div className='service-outer'> */}
+                    {/* <h4 className='service-title'>
+                        Marketing Website
+                      </h4> */}
+                    <p className='!text-primary service-description'>
+                      Today, 1MW has assisted 35+ of the largest and most sophisticated local, global, public and private lenders in the sale and valuation of real estate, with over 40,000 portfolio valuations and 200+ sales. Past and present clients include: Nationstar, Huntington, Bank of America, Goldman Sachs, Minnesota Housing, Citi, Beal Bank, US Bank, HUD, Carrington, J.P. Morgan Chase, M&T Bank, Compeer, USDA, PennyMac, Freddie Mac, CLMG, City National, Altisource and Thrivent Financial.
+                    </p>
+                    {/* </div> */}
+                  </Col>
+                  {/* <Col md={4} lg={4} sm={6}>
+                    <div className='service-outer'>
+                      <h4 className='service-title'>
+                        Marketing Website
+                      </h4>
+                      <p className='!text-primary service-description'>
+                        We design and build fast marketing websites tailored to your brand
+                      </p>
+                    </div>
+                  </Col>
+                  <Col md={4} lg={4} sm={6}>
+                    <div className='service-outer'>
+                      <h4 className='service-title'>
+                        Marketing Website
+                      </h4>
+                      <p className='!text-primary service-description'>
+                        We design and build fast marketing websites tailored to your brand
+                      </p>
+                    </div>
+                  </Col>
+                  <Col md={4} lg={4} sm={6}>
+                    <div className='service-outer'>
+                      <h4 className='service-title'>
+                        Marketing Website
+                      </h4>
+                      <p className='!text-primary service-description'>
+                        We design and build fast marketing websites tailored to your brand
+                      </p>
+                    </div>
+                  </Col> */}
+                </Row>
+
+              </div>
+              <div className='service-section mt-5'>
+                <div className='d-flex justify-content-between align-items-baseline mb-4'>
+                  <h2 className='!text-primary service-heading border-bottom w-100'>
+                    Mike Wilen
+                  </h2>
+                  {/* <Link href="/" className='viewall-link'>
+                      View all
+                  </Link> */}
+                </div>
+                <Row>
+                  <Col md={10} lg={8} sm={12}>
+                    {/* <div className='service-outer'> */}
+                    {/* <h4 className='service-title'>
+                        Marketing Website
+                      </h4> */}
+                    <p className='!text-primary service-description'>
+                      600+ Properties Sold Representing Seller<br />
+                      14+ Awards<br />
+                      Coldwell Banker Global Luxury
+                    </p>
+                    {/* </div> */}
+                  </Col>
+                  {/* <Col md={4} lg={4} sm={6}>
+                    <div className='service-outer'>
+                      <h4 className='service-title'>
+                        Marketing Website
+                      </h4>
+                      <p className='!text-primary service-description'>
+                        We design and build fast marketing websites tailored to your brand
+                      </p>
+                    </div>
+                  </Col>
+                  <Col md={4} lg={4} sm={6}>
+                    <div className='service-outer'>
+                      <h4 className='service-title'>
+                        Marketing Website
+                      </h4>
+                      <p className='!text-primary service-description'>
+                        We design and build fast marketing websites tailored to your brand
+                      </p>
+                    </div>
+                  </Col>
+                  <Col md={4} lg={4} sm={6}>
+                    <div className='service-outer'>
+                      <h4 className='service-title'>
+                        Marketing Website
+                      </h4>
+                      <p className='!text-primary service-description'>
+                        We design and build fast marketing websites tailored to your brand
+                      </p>
+                    </div>
+                  </Col> */}
+                </Row>
+
+              </div>
+              <div className='service-section mt-5'>
+                <div className='d-flex justify-content-between align-items-baseline mb-4'>
+                  <h2 className='!text-primary service-heading border-bottom w-100'>
+                    Mentions
+                  </h2>
+                  {/* <Link href="/" className='viewall-link'>
+                      View all
+                  </Link> */}
+                </div>
+                <Row>
+                  <Col md={10} lg={8} sm={12}>
+                    {/* <div className='service-outer'> */}
+                    {/* <h4 className='service-title'>
+                        Marketing Website
+                      </h4> */}
+                    <p className='!text-primary service-description'>
+                      <a href="https://www.fox9.com/news/look-inside-luxurious-rental-homes-for-the-super-bowl?">Fox News – Super Bowl Rental</a><br />
+                      <a href="https://www.bizjournals.com/twincities/news/2021/11/02/orono-wedding-chapel-on-sale-for-2-6-million.html">Minneapolis St. Paul Business Journal – Orono Listed at $2.6M</a><br />
+                      <a href="http://startribune.com/twin-cities-home-sales-continue-to-inch-lower-even-as-rates-fall/282507321/">Star Tribune – Minnesota Home Sales</a><br />
+                      <a href="http://sctimes.com/story/life/2021/08/14/big-lake-minnesota-real-estate-housing-mississippi-river-mansion-coldwell-banker-realty/5454075001/">USA Today – St. Cloud Times – Historic Victorian</a><br />
+                      <a href="https://www.startribune.com/historic-victorian-mansion-in-st-cloud-goes-on-market/600080718/#1">Star Tribune – Queen Anne Mansion</a><br />
+                    </p>
+                    {/* </div> */}
+                  </Col>
+                  {/* <Col md={4} lg={4} sm={6}>
+                    <div className='service-outer'>
+                      <h4 className='service-title'>
+                        Marketing Website
+                      </h4>
+                      <p className='!text-primary service-description'>
+                        We design and build fast marketing websites tailored to your brand
+                      </p>
+                    </div>
+                  </Col>
+                  <Col md={4} lg={4} sm={6}>
+                    <div className='service-outer'>
+                      <h4 className='service-title'>
+                        Marketing Website
+                      </h4>
+                      <p className='!text-primary service-description'>
+                        We design and build fast marketing websites tailored to your brand
+                      </p>
+                    </div>
+                  </Col>
+                  <Col md={4} lg={4} sm={6}>
+                    <div className='service-outer'>
+                      <h4 className='service-title'>
+                        Marketing Website
+                      </h4>
+                      <p className='!text-primary service-description'>
+                        We design and build fast marketing websites tailored to your brand
+                      </p>
+                    </div>
+                  </Col> */}
+                </Row>
+
+              </div>
+              {/* <div className='service-section mt-5'>
+                <div className='d-flex justify-content-between align-items-baseline mb-4'>
+                  <h2 className='!text-primary service-heading'>
                     Our Services
                   </h2>
                   <Link href="/" className='viewall-link'>
@@ -478,7 +479,7 @@ export default function Home() {
                       <h4 className='service-title'>
                         Marketing
                       </h4>
-                      <p className='service-description'>
+                      <p className='!text-primary service-description'>
                         With over a decade of experience, 1MW has become a leader in the marketing and sale of real estate. That’s not a brag, it’s a promise: to deliver tomorrow’s creative solutions — today.
                         NONMLS.com is a single entry no-code content hub to deliver, personalize and recommend real estate to consumers – across multiple channels. It's a platform that combines predictive analytics, reporting, data analytics, and data integration capabilities.
                       </p>
@@ -489,7 +490,7 @@ export default function Home() {
                       <h4 className='service-title'>
                         Visionary Experts(Curious Problem Solvers)
                       </h4>
-                      <p className='service-description'>
+                      <p className='!text-primary service-description'>
                         Your property lives through every touchpoint. Working collaboratively, we uncover and amplify your property’s unique value, while modifying misconceptions along the way.
                       </p>
                     </div>
@@ -499,7 +500,7 @@ export default function Home() {
                       <h4 className='service-title'>
                         Offering Opportunity and Value in All Market Conditions.
                       </h4>
-                      <p className='service-description'>
+                      <p className='!text-primary service-description'>
                         Today, 1MW has assisted 35+ of the largest and most sophisticated local, global, public and private lenders in the sale and valuation of real estate, with over 40,000 portfolio valuations and 200+ sales. Past and present clients include: Nationstar, Huntington, Bank of America, Goldman Sachs, Minnesota Housing, Citi, Beal Bank, US Bank, HUD, Carrington, J.P. Morgan Chase, M&T Bank, Compeer, USDA, PennyMac, Freddie Mac, CLMG, City National, Altisource and Thrivent Financial.
                       </p>
                     </div>
@@ -507,9 +508,9 @@ export default function Home() {
                 </Row>
 
               </div> */}
-                            {/* <div className='service-section mt-5'>
+              {/* <div className='service-section mt-5'>
                 <div className='d-flex justify-content-between align-items-baseline mb-4'>
-                  <h2 className='service-heading'>
+                  <h2 className='!text-primary service-heading'>
                     Development services
                   </h2>
                   <Link href="/" className='viewall-link'>
@@ -522,7 +523,7 @@ export default function Home() {
                       <h4 className='service-title'>
                         Marketing Website
                       </h4>
-                      <p className='service-description'>
+                      <p className='!text-primary service-description'>
                         We design and build fast marketing websites tailored to your brand
                       </p>
                     </div>
@@ -532,7 +533,7 @@ export default function Home() {
                       <h4 className='service-title'>
                         Marketing Website
                       </h4>
-                      <p className='service-description'>
+                      <p className='!text-primary service-description'>
                         We design and build fast marketing websites tailored to your brand
                       </p>
                     </div>
@@ -542,7 +543,7 @@ export default function Home() {
                       <h4 className='service-title'>
                         Marketing Website
                       </h4>
-                      <p className='service-description'>
+                      <p className='!text-primary service-description'>
                       </p>
                     </div>
                   </Col>
@@ -551,7 +552,7 @@ export default function Home() {
                       <h4 className='service-title'>
                         Marketing Website
                       </h4>
-                      <p className='service-description'>
+                      <p className='!text-primary service-description'>
                       </p>
                     </div>
                   </Col>
@@ -559,9 +560,9 @@ export default function Home() {
 
               </div> */}
 
-                            {/* <div className='service-section mt-5'>
+              {/* <div className='service-section mt-5'>
                 <div className='d-flex justify-content-between align-items-baseline'>
-                  <h2 className='service-heading'>
+                  <h2 className='!text-primary service-heading'>
                     Clients
                   </h2>
                   <Link href="/" className='viewall-link'>
@@ -615,42 +616,42 @@ export default function Home() {
 
               </div> */}
 
-                            <div className='service-section mt-5'>
-                                <div className='d-flex justify-content-between align-items-baseline'>
-                                    <h2 className='service-heading'>
-                                        Testimonials
-                                    </h2>
-                                    <Link href="/" className='viewall-link'>
+              <div className='service-section mt-5'>
+                <div className='d-flex justify-content-between align-items-baseline'>
+                  <h2 className='!text-primary service-heading'>
+                    Testimonials
+                  </h2>
+                  <Link href="/" className='viewall-link'>
 
-                                        View all
+                    View all
 
-                                    </Link>
-                                </div>
-                                <Row>
-                                    <Col md={6} lg={6} sm={12} className="mt-3">
-                                        <div className='testimonial'>
-                                            <p className='testimonial-text'>
-                                                “Next level! Working with 1MW took all the stress from selling our home.
-                                                I can’t speak highly enough of the service.” – A Satisfied Client
-                                            </p>
-                                        </div>
-                                    </Col>
-                                    {/* <Col md={6} lg={6} sm={6} className="mt-3">
+                  </Link>
+                </div>
+                <Row>
+                  <Col md={6} lg={6} sm={12} className="mt-3">
                     <div className='testimonial'>
-                      <p className='testimonial-text'>
+                      <p className='!text-primary testimonial-text'>
+                        “Next level! Working with 1MW took all the stress from selling our home.
+                        I can’t speak highly enough of the service.” – A Satisfied Client
+                      </p>
+                    </div>
+                  </Col>
+                  {/* <Col md={6} lg={6} sm={6} className="mt-3">
+                    <div className='testimonial'>
+                      <p className='!text-primary testimonial-text'>
                         “Next level! Working with 1MW took all the stress from selling our home.
                         I can’t speak highly enough of the service.” – A Satisfied Client
                       </p>
                     </div>
                   </Col> */}
 
-                                </Row>
+                </Row>
 
-                            </div>
+              </div>
 
 
-                            {/* <div className='my-4'>
-                <h1 className='my-2'>Check In</h1>
+              {/* <div className='my-4'>
+                <h1 className='!text-primary my-2'>Check In</h1>
                 <p className="text-primary">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
                     <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z" />
@@ -698,10 +699,12 @@ export default function Home() {
                 </div>
 
               </div> */}
-                        </div>
-                    </Container>
-                </section>
-            </main>
-        </div>
-    )
+            </div>
+          </Container>
+        </section>
+      </main>
+    </div>
+  )
 }
+
+About.Layout = Layout

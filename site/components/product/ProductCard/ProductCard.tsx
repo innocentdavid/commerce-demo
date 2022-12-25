@@ -37,6 +37,9 @@ const ProductCard: FC<Props> = ({
     className
   )
 
+  // console.log(product.name, product);
+
+
   return (
     <Link
       href={`/product/${product.slug}`}

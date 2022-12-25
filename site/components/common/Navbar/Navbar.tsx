@@ -31,6 +31,9 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
                 {l.label}
               </Link>
             ))}
+            <Link href="/about" className={s.link}>
+              About
+            </Link>
           </nav>
         </div>
         {process.env.COMMERCE_SEARCH_ENABLED && (

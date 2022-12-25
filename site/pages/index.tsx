@@ -41,18 +41,22 @@ export default function Home({
   return (
     <>
       <Grid variant="filled">
-        {products.slice(0, 3).map((product: any, i: number) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            imgProps={{
-              alt: product.name,
-              width: i === 0 ? 1080 : 540,
-              height: i === 0 ? 1080 : 540,
-              priority: true,
-            }}
-          />
-        ))}
+        {products.slice(0, 3).map((product: any, i: number) => {
+          // console.log({ product });
+
+          return (
+            <ProductCard
+              key={product.id}
+              product={product}
+              imgProps={{
+                alt: product.name,
+                width: i === 0 ? 1080 : 540,
+                height: i === 0 ? 1080 : 540,
+                priority: true,
+              }}
+            />
+          )
+        })}
       </Grid>
       <Marquee variant="secondary">
         {products.slice(0, 3).map((product: any, i: number) => (
