@@ -6,9 +6,10 @@ import 'keen-slider/keen-slider.min.css'
 
 import { FC, ReactNode, useEffect } from 'react'
 import type { AppProps } from 'next/app'
-import { Head } from '@components/common'
+// import { Head } from '@components/common'
 import { ManagedUIContext } from '@components/ui/context'
 import Script from "next/script";
+import Head from "next/head";
 
 const Noop: FC<{ children?: ReactNode }> = ({ children }) => <>{children}</>
 
@@ -21,9 +22,21 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Head />
+      <Head>
+        <meta name="description" content="Real Estate and Homes For Sale. Put the power of 1MW to work for you. Sell Your Property Today. Unrivaled Expertise. List Your Property For Sale. The Best Listing Agents. Minnesota Licensed Real Estate Advisors. Delivering Exceptional Real Estate Experiences." />
+        <title>1MW: Real Estate Marketing and Sales</title>
+      </Head>
       <Script id="adroll">
         {`
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177028475-14"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-177028475-14');
+        </script>
+
         <script type="text/javascript">
             adroll_adv_id = "ZM3RFOBYSNFZFPZK5IBZP2";
             adroll_pix_id = "EILZ42ERH5AX3MLIAKHKD6";
