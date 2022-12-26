@@ -26,9 +26,47 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <meta name="description" content="Real Estate and Homes For Sale. Put the power of 1MW to work for you. Sell Your Property Today. Unrivaled Expertise. List Your Property For Sale. The Best Listing Agents. Minnesota Licensed Real Estate Advisors. Delivering Exceptional Real Estate Experiences." />
         <title>1MW: Real Estate Marketing and Sales</title>
       </Head>
-      <Script id="adroll">
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-177028475-14"></Script>
+      <Script id="google_analytics">
         {`
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177028475-14"></script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-177028475-14');
+        `}
+      </Script>
+      <Script id="adroll">
+        {`          
+            adroll_adv_id = "ZM3RFOBYSNFZFPZK5IBZP2";
+            adroll_pix_id = "EILZ42ERH5AX3MLIAKHKD6";
+            adroll_version = "2.0";
+
+            (function(w: obj, d: any, e:any, o: any, a: number) {
+              w.__adroll_loaded = true;
+            w.adroll = w.adroll || [];
+            w.adroll.f = [ 'setProperties', 'identify', 'track' ];
+            var roundtripUrl = "https://s.adroll.com/j/" + adroll_adv_id
+            + "/roundtrip.js";
+            for (a = 0; a < w.adroll.f.length; a++) {
+              w.adroll[w.adroll.f[a]] = w.adroll[w.adroll.f[a]] || (function (n) {
+                return function () {
+                  w.adroll.push([n, arguments])
+                }
+              })(w.adroll.f[a])
+            }
+
+            e = d.createElement('script');
+            o = d.getElementsByTagName('script')[0];
+            e.async = 1;
+            e.src = roundtripUrl;
+            o.parentNode.insertBefore(e, o);
+    })(window, document);
+            adroll.track("pageView");
+        `}
+      </Script>
+      {/* <Script id="adroll">
+        {`
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -65,7 +103,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
             adroll.track("pageView");
           </script>
         `}
-      </Script>
+      </Script> */}
       <ManagedUIContext>
         <Layout pageProps={pageProps}>
           <Component {...pageProps} />
