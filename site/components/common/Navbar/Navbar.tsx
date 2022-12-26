@@ -20,7 +20,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
     <Container clean className="mx-auto max-w-8xl px-6">
       <div className={s.nav}>
         <div className="flex items-center flex-1">
-          <Link href="/" className={s.logo} aria-label="Logo">
+          <Link href="/" className={`${s.logo} mr-3`} aria-label="Logo">
             {/* <Logo /> */}
             <Image src={'/1MW Logo.png'} alt="" width={32} height={12} className="w-[fit-content]" />
           </Link>
