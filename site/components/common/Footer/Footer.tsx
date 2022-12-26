@@ -9,6 +9,7 @@ import { Logo, Container } from '@components/ui'
 import { I18nWidget } from '@components/common'
 import ThemeSwitcher from '@components/ui/ThemeSwitcher'
 import s from './Footer.module.css'
+import Image from 'next/image'
 
 interface Props {
   className?: string
@@ -27,8 +28,34 @@ const Footer: FC<Props> = ({ className, pages }) => {
   const { sitePages } = usePages(pages)
   const rootClassName = cn(s.root, className)
 
-  return (
-    <footer className={rootClassName}>
+  return (<>
+    <footer className="flex p-10">
+      <div className="flex-1 flex gap-5 items-center">
+        <Image src={'/1 Logo.png'} alt="" width={200} height={8} className="h-[fit-content]" />
+        <div className=''>
+          <div><Link href={'#Facebook'}>Facebook</Link>Sell</div>
+          <div><Link href={'#Facebook'}>Facebook</Link>Real Estate</div>
+          <div><Link href={'tel:tel:6124009000'}>612-400-9000</Link></div>
+          <div><Link href={'mailto:mike@1mw.com'}>Mike@1MW.com</Link></div>
+          <div>Coldwell Banker Realty</div>
+          <div>Minneapolis MN / Chicago IL</div>
+          <div>
+            <Link href={'facebook.com/mikewilenrealestate'}>Facebook</Link>
+          </div>
+          <div>
+            <Link href={'instagram.com/mikewilen'}>Instagram</Link>
+          </div>
+          <div>
+            <Link href={'https://www.linkedin.com/mikewilen'}>LinkedIn</Link>
+          </div>
+          <div>
+            <Link href={'https://www.revisor.mn.gov/statutes/cite/82.67'}>Agency Relationship</Link>
+          </div>
+        </div>
+      </div>
+      <div className="flex-1"></div>
+    </footer>
+    {/* <footer className={rootClassName}>
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-accent-2 py-12 !text-primary !bg-primary transition-colors duration-150">
           <div className="col-span-1 lg:col-span-2">
@@ -91,8 +118,8 @@ const Footer: FC<Props> = ({ className, pages }) => {
           </div>
         </div>
       </Container>
-    </footer>
-  )
+    </footer> */}
+  </>)
 }
 
 function usePages(pages?: Page[]) {
