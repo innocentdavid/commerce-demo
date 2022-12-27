@@ -6,7 +6,7 @@ import 'keen-slider/keen-slider.min.css'
 
 import { FC, ReactNode, useEffect } from 'react'
 import type { AppProps } from 'next/app'
-// import { Head } from '@components/common'
+// import { Head } from '@components/common' //
 import { ManagedUIContext } from '@components/ui/context'
 import Script from "next/script";
 import Head from "next/head";
